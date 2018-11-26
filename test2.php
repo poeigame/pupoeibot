@@ -58,11 +58,19 @@
 	else if($message == "!hs" || $message == "!จับมือ")
 	{
 		  $hsimg1 = 'https://raw.githubusercontent.com/poeigame/pupoeibot/master/img/hs1.jpg';
-		  $hsimg2 = 'https://raw.githubusercontent.com/poeigame/pupoeibot/master/img/hs1.jpg';
+		  $hsimg2 = 'https://raw.githubusercontent.com/poeigame/pupoeibot/master/img/hs2.jpg';
 		  $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
 		  $arrayPostData['messages'][0]['type'] = "image";
 		  $arrayPostData['messages'][0]['originalContentUrl'] = $hsimg1;
           $arrayPostData['messages'][0]['previewImageUrl'] = $hsimg1;
+		  $arrayPostData['messages'][1]['type'] = "image";
+		  $arrayPostData['messages'][1]['originalContentUrl'] = $hsimg2;
+          $arrayPostData['messages'][1]['previewImageUrl'] = $hsimg2;
+		  $arrayPostData['messages'][2]['type'] = "location";
+        $arrayPostData['messages'][2]['title'] = "Bitec Bangna";
+        $arrayPostData['messages'][2]['address'] =   "13.67123710049069,100.61058300000002";
+        $arrayPostData['messages'][2]['latitude'] = "13.67123710049069,100";
+        $arrayPostData['messages'][2]['longitude'] = "100.61058300000002";
           replyMsg($arrayHeader,$arrayPostData);
 	}
 function replyMsg($arrayHeader,$arrayPostData){
