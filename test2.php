@@ -62,9 +62,6 @@
 		  $arrayPostData['messages'][0]['type'] = "image";
 		  $arrayPostData['messages'][0]['originalContentUrl'] = $hsimg1;
           $arrayPostData['messages'][0]['previewImageUrl'] = $hsimg1;
-		  $arrayPostData['messages'][1]['type'] = "image";
-		  $arrayPostData['messages'][1]['originalContentUrl'] = $hsimg2;
-          $arrayPostData['messages'][1]['previewImageUrl'] = $hsimg2;
           replyMsg($arrayHeader,$arrayPostData);
 	}
 function replyMsg($arrayHeader,$arrayPostData){
