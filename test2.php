@@ -56,8 +56,8 @@
     }
 	else if($message == "!hs" || $message == "!จับมือ")
 	{
-		  $hsimg1 = 'http://onefornoey.com/imgfortest/hs1.jpg';
-		  $hsimg2 = 'http://onefornoey.com/imgfortest/hs2.jpg';
+		  $hsimg1 = 'https://raw.githubusercontent.com/poeigame/pupoeibot/master/img/hs1.jpg';
+		  $hsimg2 = 'https://raw.githubusercontent.com/poeigame/pupoeibot/master/img/hs1.jpg';
 		  $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
 		  $arrayPostData['messages'][0]['type'] = "image";
 		  $arrayPostData['messages'][0]['originalContentUrl'] = $hsimg1;
