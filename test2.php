@@ -56,8 +56,8 @@
     }
 	else if($message == "!hs" || $message == "!จับมือ")
 	{
-		  $hsimg1 = 'https://scontent.fbkk2-8.fna.fbcdn.net/v/t1.0-9/45011635_1780830422044208_8057731411802587136_o.png?_nc_cat=107&_nc_ht=scontent.fbkk2-8.fna&oh=a6a097b96b34597268623b51f024955e&oe=5C6EE325';
-		  $hsimg2 = 'https://scontent.fbkk22-1.fna.fbcdn.net/v/t1.0-9/44942788_1780830458710871_4702818958091223040_o.png?_nc_cat=100&amp;_nc_ht=scontent.fbkk22-1.fna&amp;oh=5fd6dc681033c38d33cda397ec1e33b2&amp;oe=5C7A2B0E';
+		  $hsimg1 = 'http://onefornoey.com/imgfortest/hs1.png';
+		  $hsimg2 = 'http://onefornoey.com/imgfortest/hs2.png';
 		  $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
 		  $arrayPostData['messages'][0]['type'] = "image";
 		  $arrayPostData['messages'][0]['originalContentUrl'] = $hsimg1;
