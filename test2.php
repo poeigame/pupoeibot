@@ -55,6 +55,12 @@
         $arrayPostData['messages'][1]['stickerId'] = "131";
         replyMsg($arrayHeader,$arrayPostData);
     }
+	else if(strpos($message,"มิวนิค")){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "อย่าบด !";
+        replyMsg($arrayHeader,$arrayPostData);
+    }
 	else if($message == "!hs" || $message == "!จับมือ")
 	{
 		  $hsimg1 = 'https://raw.githubusercontent.com/poeigame/pupoeibot/master/img/hs1.jpg';
