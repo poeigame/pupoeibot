@@ -39,26 +39,36 @@
     else if($message == "!bitec"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "location";
-        $arrayPostData['messages'][0]['title'] = "สยามพารากอน";
-        $arrayPostData['messages'][0]['address'] =   "13.7465354,100.532752";
-        $arrayPostData['messages'][0]['latitude'] = "13.7465354";
-        $arrayPostData['messages'][0]['longitude'] = "100.532752";
+        $arrayPostData['messages'][0]['title'] = "bitec";
+        $arrayPostData['messages'][0]['address'] =   "13.6724263,100.6104426";
+        $arrayPostData['messages'][0]['latitude'] = "13.6724263";
+        $arrayPostData['messages'][0]['longitude'] = "100.6104426";
         replyMsg($arrayHeader,$arrayPostData);
     }
     #ตัวอย่าง Message Type "Text + Sticker ใน 1 ครั้ง"
-    else if($message == "ลาก่อน"){
+    else if($message == "ลาก่อน" || $message == "บาย"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "อย่าทิ้งกันไป";
+        $arrayPostData['messages'][0]['text'] = "ไปเถอะไปไกลๆ";
         $arrayPostData['messages'][1]['type'] = "sticker";
         $arrayPostData['messages'][1]['packageId'] = "1";
-        $arrayPostData['messages'][1]['stickerId'] = "131";
+        $arrayPostData['messages'][1]['stickerId'] = "7";
         replyMsg($arrayHeader,$arrayPostData);
     }
 	else if(strpos($message,"มิวนิค") == true || $message == "มิวนิค"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "อย่าบด !";
+        replyMsg($arrayHeader,$arrayPostData);
+    }
+	else if(strpos($message,"ปูเป้") == true || $message == "ปูเป้" || strpos($message,"ปู้ป") == true || $message == "ปู้ป"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "คนน่ารัก!";
+        $arrayPostData['messages'][1]['type'] = "sticker";
+        $arrayPostData['messages'][1]['packageId'] = "1";
+        $arrayPostData['messages'][1]['stickerId'] = "5";
+		
         replyMsg($arrayHeader,$arrayPostData);
     }
 	else if($message == "!hs" || $message == "!จับมือ")
