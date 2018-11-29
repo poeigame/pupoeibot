@@ -36,7 +36,7 @@
         replyMsg($arrayHeader,$arrayPostData);
     }
     #ตัวอย่าง Message Type "Location"
-    else if($message == "พิกัดสยามพารากอน"){
+    else if($message == "!bitec"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "location";
         $arrayPostData['messages'][0]['title'] = "สยามพารากอน";
@@ -55,7 +55,7 @@
         $arrayPostData['messages'][1]['stickerId'] = "131";
         replyMsg($arrayHeader,$arrayPostData);
     }
-	else if(strpos($message,"มิวนิค") != ""){
+	else if(strpos($message,"มิวนิค") == true || $message == "มิวนิค"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "อย่าบด !";
